@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>M05 - Bullseye</title>
+  <style>
+    body {
+      background-color: #f4c75b;
+      font-family: 'Courier New', Courier, monospace;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    #chalkboard {
+      background-color: #2d4b4f;
+      color: white;
+      padding: 40px;
+      margin: 50px auto;
+      width: 300px;
+      border: 10px solid #5d3f22;
+      border-radius: 10px;
+    }
+
+    h2 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    p {
+      margin: 5px 0;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>BULLSEYE!</h1>
+  <p>Target Practice for Your Mind</p>
+
+  <div id="chalkboard"></div>
+
+  <script>
+    // Ask the user for a number
+    let userInput = prompt("Enter a number from 0 to 10:");
+    let number = parseInt(userInput);
+
+    // Treat null, NaN, or out-of-range input as 0
+    if (isNaN(number) || number < 0 || number > 10) {
+      number = 0;
+    }
+
+    // Build the multiplication table string
+    let msg = "<h2>Multiplication Table</h2>";
+    for (let i = 1; i <= 10; i++) {
+      msg += `<p>${i} x ${number} = ${i * number}</p>`;
+    }
+
+    // Display it on the page
+    document.getElementById("chalkboard").innerHTML = msg;
+  </script>
+
+</body>
+</html>
