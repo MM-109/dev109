@@ -1,0 +1,76 @@
+/* Apply background image to body */
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-image: url('background.jpg'); /* replace with your image filename */
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+}
+
+/* Style the logo */
+header h1 {
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    color: gold;
+}
+
+/* Navigation menu */
+nav {
+    background-color: #b347b3;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Feature section with image */
+#feature {
+    background-color: #8cc63f;
+    background-image: url('feature-image.jpg'); /* replace with your image filename */
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Columns */
+#col1 {
+    background-color: #f78da7;
+    padding: 20px;
+}
+
+#col2 {
+    background-color: #c2185b;
+    padding: 20px;
+    color: white;
+}
+
+#col3 {
+    background-color: #ad1457;
+    padding: 20px;
+    color: white;
+}
+
+/* Footer */
+footer {
+    background-color: #b347b3;
+    text-align: center;
+    padding: 10px;
+    color: white;
+}
