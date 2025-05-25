@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>M07 - Rhombus</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>Mumtaas Mohamud - Rhombus Generator</h1>
+
+  <label for="rHeight">What is the size of Rhombus?</label><br>
+  <input type="number" id="rHeight" value="5" min="1"><br><br>
+
+  <label for="colorEven">Choose color for Even position:</label><br>
+  <select id="colorEven">
+    <option value="#0000FF">Blue</option>
+    <option value="#FF0000">Red</option>
+    <option value="#FF9900">Orange</option>
+  </select><br><br>
+
+  <label for="colorOdd">Choose color for Odd position:</label><br>
+  <select id="colorOdd">
+    <option value="#FF0099">Pink</option>
+    <option value="#33FF00">Green</option>
+    <option value="#660099">Purple</option>
+  </select><br><br>
+
+  <label for="symbol">Choose symbol for Rhombus:</label><br>
+  <select id="symbol">
+    <option value="*">*</option>
+    <option value="$">$</option>
+    <option value="@">@</option>
+  </select><br><br>
+
+  <button onclick="createRhombus(
+    document.getElementById('rHeight').value,
+    document.getElementById('colorEven').value,
+    document.getElementById('colorOdd').value,
+    document.getElementById('symbol').value)">Display Rhombus</button>
+
+  <div id="upRight"></div>
+  <div id="downRight"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
