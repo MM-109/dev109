@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML Table Example</title>
+</head>
+<body>
+
+  <table border="1">
+    <!-- Title row -->
+    <tr>
+      <td colspan="4"><h1>HTML Table Example</h1></td>
+    </tr>
+
+    <!-- Column headers -->
+    <tr>
+      <td><h2>Day of the Week</h2></td>
+      <td><h2>Week Starting</h2></td>
+      <td><h2>Recipe Name</h2></td>
+      <td><h2>Instructions</h2></td>
+    </tr>
+
+    <!-- Table headers row -->
+    <tr>
+      <th>Monday</th>
+      <td rowspan="2">
+        <img src="your-image.jpg" alt="Kitchen table" width="100">
+        <p><b>Meal Planner</b></p>
+      </td>
+      <td>Spinach Feta Pizza</td>
+      <td rowspan="5">Add the name of the recipe under the column Recipe Name</td>
+    </tr>
+
+    <!-- Tuesday row -->
+    <tr>
+      <th>Tuesday</th>
+      <td>My New Recipe</td>
+    </tr>
+
+    <!-- Remaining empty rows -->
+    <tr><th>Wednesday</th><td></td><td></td></tr>
+    <tr><th>Thursday</th><td></td><td></td></tr>
+    <tr><th>Friday</th><td></td><td></td></tr>
+    <tr><th>Saturday</th><td></td><td></td></tr>
+    <tr><th>Sunday</th><td></td><td></td></tr>
+  </table>
+
+</body>
+</html>
