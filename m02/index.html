@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meal Planner Table</title>
+</head>
+<body>
+  <table border="1">
+    <!-- Title row -->
+    <tr>
+      <td colspan="4"><h1 style="text-align: center;">HTML Table Example</h1></td>
+    </tr>
+
+    <!-- Column headers row -->
+    <tr>
+      <td><h2>Day of the Week</h2></td>
+      <td><h2>Week Starting</h2></td>
+      <td><h2>2/15/2018</h2></td>
+      <td><h2>Instructions</h2></td>
+    </tr>
+
+    <!-- Monday row with image and meal -->
+    <tr>
+      <th>Monday</th>
+      <td rowspan="2">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Kitchen.png/800px-Kitchen.png" alt="Kitchen table" width="100">
+      </td>
+      <td><b>Meal Planner</b></td>
+      <td rowspan="6">Add the name of the recipe under the column Recipe Name</td>
+    </tr>
+
+    <!-- Monday recipe -->
+    <tr>
+      <td></td>
+      <td>Spinach Feta Pizza</td>
+    </tr>
+
+    <!-- Tuesday -->
+    <tr>
+      <th>Tuesday</th>
+      <td></td>
+      <td>My New Recipe</td>
+    </tr>
+
+    <!-- Rest of the week (blank for now) -->
+    <tr><th>Wednesday</th><td></td><td></td></tr>
+    <tr><th>Thursday</th><td></td><td></td></tr>
+    <tr><th>Friday</th><td></td><td></td></tr>
+    <tr><th>Saturday</th><td></td><td></td></tr>
+    <tr><th>Sunday</th><td></td><td></td></tr>
+  </table>
+</body>
+</html>
