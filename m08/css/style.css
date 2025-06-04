@@ -1,0 +1,34 @@
+body {
+  font-family: sans-serif;
+  background: url(../images/hotel.jpg) no-repeat center center fixed;
+  background-size: cover;
+  color: #c5f5d1;
+  margin: 0;
+  padding: 0;
+}
+
+#info {
+  background-color: #1a1a1a;
+  padding: 20px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 200px;
+  height: 100vh;
+}
+
+h1 {
+  color: #95e5b2;
+  font-size: 1.2em;
+  text-transform: lowercase;
+  padding-bottom: 10px;
+}
+
+p {
+  border-top: 1px solid #ccc;
+  padding: 5px 0;
+}
+
+#hotel3 {
+  border: 2px solid red;
+}
