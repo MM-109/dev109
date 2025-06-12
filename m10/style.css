@@ -1,0 +1,16 @@
+body {
+  height: 100vh;
+  margin: 0;
+  background: beige;
+  font-family: sans-serif;
+  text-align: center;
+}
+
+#controls {
+  margin-bottom: 1em;
+}
+
+.dot {
+  position: absolute;
+  border-radius: 50%;
+}
