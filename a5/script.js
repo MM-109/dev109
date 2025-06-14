@@ -1,76 +1,84 @@
-body {
-  margin: 0;
-  font-family: 'Urbanist', sans-serif;
-  background: #f0ece2;
-  color: #FFCC33; /* Updated text color */
-  text-align: center;
-  transition: background 1s ease-in-out;
+// Barca 2015 Carousel Slideshow Script
+// Controls slide images, captions, timer, and background styling
+
+const slides = [
+  {
+    src: "slide_1.jpg",
+    alt: "Barcelona women celebrating Champions League win",
+    caption: "The queens of Europe. Again."
+  },
+  {
+    src: "slide_2.jpg",
+    alt: "Xavi and Iniesta at Spotify Camp Nou",
+    caption: "Legends never leave. They evolve."
+  },
+  {
+    src: "slide_3.jpg",
+    alt: "MSN trio with their backs: Messi, Suárez, Neymar celebrating with teammates",
+    caption: "The most feared trio in football. Ever."
+  },
+  {
+    src: "slide_4.jpg",
+    alt: "Barça lifting the Club World Cup",
+    caption: "Champions of every continent."
+  },
+  {
+    src: "slide_5.jpg",
+    alt: "Barcelona fans waving flags in the stands",
+    caption: "More than a club. A movement."
+  }
+];
+
+let currentIndex = 0;
+let timer = 11;
+const slideshow = document.getElementById("slideshow");
+const caption = document.getElementById("caption");
+const timerDisplay = document.getElementById("timer");
+const chantSection = document.getElementById("chant");
+
+function updateSlide(index) {
+  const slide = slides[index];
+  slideshow.src = slide.src;
+  slideshow.alt = slide.alt;
+  caption.textContent = slide.caption;
+  caption.style.color = "#ffd700"; // Gold yellow
+  updateBackground(index);
+  updateChantVisibility(index);
 }
 
-#chant {
-  padding: 60px 20px 20px;
-  font-size: 1.6rem;
-  font-weight: 600;
-  line-height: 2.2rem;
-  max-width: 900px;
-  margin: auto;
-  color: #FFCC33;
+function nextSlide() {
+  currentIndex = (currentIndex + 1) % slides.length;
+  updateSlide(currentIndex);
+  resetTimer();
 }
 
-#chant span {
-  display: block;
-  margin-bottom: 14px;
+function prevSlide() {
+  currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+  updateSlide(currentIndex);
+  resetTimer();
 }
 
-.highlight {
-  background-color: #FFCC33;
-  color: #222;
-  padding: 0 6px;
-  border-radius: 4px;
+function resetTimer() {
+  timer = currentIndex === 2 ? 11 : 5;
 }
 
-#slideshow-container {
-  background-color: #f0ece2;
-  padding: 40px 20px;
-  min-height: 100vh;
-  box-sizing: border-box;
+function updateBackground(index) {
+  const body = document.body;
+  // All slides use the same 2015 kit inspired gradient from slide 2
+  body.style.background = "linear-gradient(to right, #ea00ff, #ae46d0, #64c0ea)";
 }
 
-img {
-  max-width: 100%;
-  height: auto;
-  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.2);
-  border: 6px solid #991f1f;
-  background-color: #fff;
+function updateChantVisibility(index) {
+  if (chantSection) {
+    chantSection.style.display = index === 0 ? "block" : "none";
+  }
 }
 
-#caption {
-  margin: 18px 0 10px;
-  font-size: 1.3rem;
-  font-weight: bold;
-  color: #FFCC33;
-}
-
-#timer {
-  font-size: 1.5rem;
-  font-weight: bold;
-  margin: 10px 0;
-  color: #FFCC33;
-}
-
-button {
-  background-color: #b12727;
-  border: none;
-  padding: 12px 24px;
-  margin: 10px;
-  color: #fff;
-  font-size: 1rem;
-  font-weight: bold;
-  cursor: pointer;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-}
-
-button:hover {
-  background-color: #7f1919;
-}
+updateSlide(currentIndex);
+setInterval(() => {
+  timer--;
+  timerDisplay.textContent = timer;
+  if (timer <= 0) {
+    nextSlide();
+  }
+}, 1000);
