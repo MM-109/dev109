@@ -25,7 +25,7 @@ const slides = [
   {
     src: "slide_5.jpg",
     alt: "Barcelona fans waving flags in the stands",
-    caption: "More than a club."
+    caption: "125 years. More than a club."
   }
 ];
 
@@ -42,8 +42,8 @@ function updateSlide(index) {
   slideshow.alt = slide.alt;
   caption.textContent = slide.caption;
   caption.style.color = "#ffd700"; // Gold yellow
-  updateBackground(index);
-  updateChantVisibility(index);
+  updateBackground();
+  updateChantVisibility();
   resetTimer();
 }
 
@@ -62,15 +62,14 @@ function resetTimer() {
   timerDisplay.textContent = timer;
 }
 
-function updateBackground(index) {
+function updateBackground() {
   const body = document.body;
-  // All slides use the same 2015 kit inspired gradient from slide 2
   body.style.background = "linear-gradient(to right, #ea00ff, #ae46d0, #64c0ea)";
 }
 
-function updateChantVisibility(index) {
+function updateChantVisibility() {
   if (chantSection) {
-    chantSection.style.display = index === 0 ? "block" : "none";
+    chantSection.style.display = "block";
   }
 }
 
