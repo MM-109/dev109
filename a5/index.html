@@ -2,21 +2,50 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Barça Carousel</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <main class="carousel-wrapper">
-    <img id="slideshow" src="" alt="" />
-    <p id="caption"></p>
+  <div id="container">
+    <img id="slideshow" src="slide_1.jpg" alt="Barcelona women celebrating Champions League win" />
+    <div id="caption">The queens of Europe. Again.</div>
 
-    <div class="controls">
+    <div id="controls">
       <button onclick="prevSlide()">Previous</button>
-      <span id="timer">11</span>
+      <div id="timer">11</div>
       <button onclick="nextSlide()">Next</button>
     </div>
-  </main>
+
+    <div id="chant">
+      Our enemies are many —<br>
+      Our passes are more.<br>
+      They came with fire —<br>
+      We danced on their ashes!<br>
+      England roared —<br>
+      We silenced the crown!<br>
+      Germany charged —<br>
+      We passed them to death!<br>
+      Italy prayed —<br>
+      We broke their defense!<br>
+      France dreamed —<br>
+      We shattered their sleep!<br>
+      We did not run —<br>
+      We did not hide —<br>
+      We pressed, we passed, we scored!<br><br>
+      The fire of <strong>Messi</strong>!<br>
+      The rage of <strong>Suárez</strong>!<br>
+      The rhythm of <strong>Neymar</strong>!<br>
+      The vision of <strong>Iniesta</strong>!<br>
+      The mind of <strong>Xavi</strong>!<br>
+      The flame of <strong>Dani Alves</strong>!<br><br>
+      Say it! Say it!<br>
+      We are Barça!<br>
+      We are more than a club!<br>
+      We are the storm you fear at night!<br>
+      We are the pass before the goal!
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>
