@@ -1,0 +1,106 @@
+/* Retro Barca Poster-Inspired CSS */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Bebas+Neue&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Bebas Neue', sans-serif;
+  background: linear-gradient(135deg, #e1d8c3, #f0ece2);
+  color: #222;
+}
+
+.chant {
+  padding: 2rem 1rem;
+  text-align: center;
+  background: repeating-linear-gradient(90deg, #cf4520 0, #cf4520 20px, #5a9ca4 20px, #5a9ca4 40px);
+  color: #fff;
+  border-top: 5px solid #333;
+  border-bottom: 5px solid #333;
+  font-size: 1.7rem;
+  line-height: 1.4;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 2px #00000044;
+}
+
+.chant-call, .ending {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #f4e04d;
+  margin-top: 1rem;
+  text-shadow: 2px 2px 4px #00000077;
+}
+
+.red {
+  color: #cf4520;
+}
+
+.blue {
+  color: #5a9ca4;
+}
+
+.bold {
+  font-weight: 800;
+}
+
+.player {
+  color: #000;
+  background: #f4e04d;
+  padding: 0 0.2em;
+  border-radius: 0.2em;
+  font-style: italic;
+}
+
+#carousel {
+  max-width: 800px;
+  margin: 3rem auto;
+  text-align: center;
+  padding: 1rem;
+  background: #fff;
+  border: 2px solid #333;
+  box-shadow: 0 0 15px #00000033;
+}
+
+#slideshow {
+  width: 100%;
+  height: auto;
+  border: 2px solid #cf4520;
+  margin-bottom: 1rem;
+}
+
+#caption {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.buttons button {
+  padding: 0.7rem 1.5rem;
+  font-size: 1rem;
+  margin: 0 1rem;
+  border: none;
+  background-color: #cf4520;
+  color: #fff;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.buttons button:hover {
+  transform: scale(1.1);
+  background-color: #b43b1c;
+}
+
+#timer {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #cf4520;
+  margin-top: 1rem;
+}
+
+footer {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+footer img {
+  height: 31px;
+  margin: 0 10px;
+}
