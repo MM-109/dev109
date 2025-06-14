@@ -1,106 +1,59 @@
-/* Retro Barca Poster-Inspired CSS */
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Bebas+Neue&display=swap');
-
 body {
   margin: 0;
-  font-family: 'Bebas Neue', sans-serif;
-  background: linear-gradient(135deg, #e1d8c3, #f0ece2);
-  color: #222;
-}
-
-.chant {
-  padding: 2rem 1rem;
+  font-family: "Segoe UI", sans-serif;
+  background-color: #f0ece2;
   text-align: center;
-  background: repeating-linear-gradient(90deg, #cf4520 0, #cf4520 20px, #5a9ca4 20px, #5a9ca4 40px);
-  color: #fff;
-  border-top: 5px solid #333;
-  border-bottom: 5px solid #333;
-  font-size: 1.7rem;
-  line-height: 1.4;
-  letter-spacing: 1px;
-  text-shadow: 1px 1px 2px #00000044;
+  transition: background 0.5s ease;
 }
 
-.chant-call, .ending {
-  font-size: 2rem;
-  font-weight: bold;
-  color: #f4e04d;
-  margin-top: 1rem;
-  text-shadow: 2px 2px 4px #00000077;
+.carousel-wrapper {
+  padding: 40px 20px;
 }
 
-.red {
-  color: #cf4520;
-}
-
-.blue {
-  color: #5a9ca4;
-}
-
-.bold {
-  font-weight: 800;
-}
-
-.player {
-  color: #000;
-  background: #f4e04d;
-  padding: 0 0.2em;
-  border-radius: 0.2em;
-  font-style: italic;
-}
-
-#carousel {
-  max-width: 800px;
-  margin: 3rem auto;
-  text-align: center;
-  padding: 1rem;
-  background: #fff;
-  border: 2px solid #333;
-  box-shadow: 0 0 15px #00000033;
-}
-
-#slideshow {
-  width: 100%;
+img#slideshow {
+  max-width: 100%;
   height: auto;
-  border: 2px solid #cf4520;
-  margin-bottom: 1rem;
+  width: 900px;
+  height: 600px;
+  border: 8px solid #a52a2a;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3);
+  background-color: #fff;
 }
 
 #caption {
-  font-size: 1.2rem;
-  color: #333;
-  margin-bottom: 1rem;
+  margin: 20px auto;
+  font-size: 1.3rem;
+  font-weight: bold;
+  max-width: 90%;
+  color: yellow;
+  text-shadow: 2px 2px 2px #000;
 }
 
-.buttons button {
-  padding: 0.7rem 1.5rem;
-  font-size: 1rem;
-  margin: 0 1rem;
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+button {
+  background-color: #a52a2a;
   border: none;
-  background-color: #cf4520;
   color: #fff;
+  font-size: 1rem;
+  padding: 10px 20px;
+  border-radius: 8px;
   cursor: pointer;
-  transition: transform 0.2s ease;
+  transition: background 0.3s ease;
 }
 
-.buttons button:hover {
-  transform: scale(1.1);
-  background-color: #b43b1c;
+button:hover {
+  background-color: #7a1e1e;
 }
 
 #timer {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   font-weight: bold;
-  color: #cf4520;
-  margin-top: 1rem;
-}
-
-footer {
-  text-align: center;
-  margin: 2rem 0;
-}
-
-footer img {
-  height: 31px;
-  margin: 0 10px;
+  color: yellow;
 }
