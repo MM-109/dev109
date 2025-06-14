@@ -1,80 +1,76 @@
-const images = [
-  {
-    src: "new_slide_4.jpg",
-    alt: "Barça Femení celebrating with the trophy and confetti",
-    caption: "History made. Standards set."
-  },
-  {
-    src: "slide_2.jpg",
-    alt: "Xavi and Iniesta walking out with their children",
-    caption: "Legends don’t retire. They return as mentors."
-  },
-  {
-    src: "slide_3.jpg",
-    alt: "MSN trio with their backs: Messi, Suárez, Neymar celebrating with teammates",
-    caption: "The most feared trio in football. Ever."
-  },
-  {
-    src: "slide_4.jpg",
-    alt: "Barcelona squad celebrating Club World Cup victory",
-    caption: "Even this one has our name on it."
-  },
-  {
-    src: "slide_5.jpg",
-    alt: "125-year anniversary FC Barcelona collage",
-    caption: "125 years. More than a club."
-  }
-];
-
-let currentIndex = 0;
-let timer = 11;
-let intervalId;
-
-const slideshow = document.getElementById("slideshow");
-const caption = document.getElementById("caption");
-const timerDisplay = document.getElementById("timer");
-
-function updateSlide(index) {
-  const image = images[index];
-  slideshow.src = image.src;
-  slideshow.alt = image.alt;
-  caption.textContent = image.caption;
-  if (index === 2) {
-    document.body.style.background = "linear-gradient(135deg, #fc00ff, #00dbde)";
-  } else {
-    document.body.style.background = "#f0ece2";
-  }
+body {
+  margin: 0;
+  font-family: 'Urbanist', sans-serif;
+  background: #f0ece2;
+  color: #FFCC33; /* Updated text color */
+  text-align: center;
+  transition: background 1s ease-in-out;
 }
 
-function nextSlide() {
-  currentIndex = (currentIndex + 1) % images.length;
-  updateSlide(currentIndex);
-  resetTimer();
+#chant {
+  padding: 60px 20px 20px;
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 2.2rem;
+  max-width: 900px;
+  margin: auto;
+  color: #FFCC33;
 }
 
-function prevSlide() {
-  currentIndex = (currentIndex - 1 + images.length) % images.length;
-  updateSlide(currentIndex);
-  resetTimer();
+#chant span {
+  display: block;
+  margin-bottom: 14px;
 }
 
-function countdown() {
-  timer--;
-  if (timer === 0) {
-    nextSlide();
-    timer = 11;
-  }
-  timerDisplay.textContent = timer;
+.highlight {
+  background-color: #FFCC33;
+  color: #222;
+  padding: 0 6px;
+  border-radius: 4px;
 }
 
-function resetTimer() {
-  timer = 11;
-  timerDisplay.textContent = timer;
+#slideshow-container {
+  background-color: #f0ece2;
+  padding: 40px 20px;
+  min-height: 100vh;
+  box-sizing: border-box;
 }
 
-function startSlideshow() {
-  updateSlide(currentIndex);
-  intervalId = setInterval(countdown, 1000);
+img {
+  max-width: 100%;
+  height: auto;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.2);
+  border: 6px solid #991f1f;
+  background-color: #fff;
 }
 
-startSlideshow();
+#caption {
+  margin: 18px 0 10px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #FFCC33;
+}
+
+#timer {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 10px 0;
+  color: #FFCC33;
+}
+
+button {
+  background-color: #b12727;
+  border: none;
+  padding: 12px 24px;
+  margin: 10px;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #7f1919;
+}
