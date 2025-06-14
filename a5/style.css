@@ -1,59 +1,69 @@
 body {
   margin: 0;
-  font-family: "Segoe UI", sans-serif;
-  background-color: #f0ece2;
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(to right, #ea00ff, #ae46d0, #64c0ea); /* Barça 2015 home kit vibes */
+  color: #ffd700; /* Golden yellow text */
   text-align: center;
-  transition: background 0.5s ease;
+  transition: background 0.5s ease-in-out;
 }
 
-.carousel-wrapper {
-  padding: 40px 20px;
+#container {
+  max-width: 900px;
+  margin: auto;
+  padding: 2rem;
 }
 
 img#slideshow {
-  max-width: 100%;
+  width: 100%;
   height: auto;
-  width: 900px;
-  height: 600px;
-  border: 8px solid #a52a2a;
-  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3);
-  background-color: #fff;
+  border: 6px solid #b71c1c;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
 }
 
 #caption {
-  margin: 20px auto;
   font-size: 1.3rem;
-  font-weight: bold;
-  max-width: 90%;
-  color: yellow;
-  text-shadow: 2px 2px 2px #000;
+  font-weight: 700;
+  color: #ffd700;
+  margin-top: 1rem;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
 }
 
-.controls {
+#controls {
+  margin-top: 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 30px;
-  margin-top: 20px;
+  gap: 1.2rem;
 }
 
 button {
-  background-color: #a52a2a;
-  border: none;
-  color: #fff;
+  padding: 0.6rem 1.2rem;
   font-size: 1rem;
-  padding: 10px 20px;
-  border-radius: 8px;
+  font-weight: bold;
+  background-color: #b71c1c;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
   cursor: pointer;
   transition: background 0.3s ease;
 }
 
 button:hover {
-  background-color: #7a1e1e;
+  background-color: #880e4f;
 }
 
 #timer {
-  font-size: 1.4rem;
   font-weight: bold;
-  color: yellow;
+  font-size: 1.2rem;
+  color: #ffd700;
+}
+
+#chant {
+  margin-top: 3rem;
+  font-size: 1.2rem;
+  color: #ffd700;
+  line-height: 2;
+  display: none;
+  white-space: pre-line;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
 }
