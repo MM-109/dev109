@@ -25,7 +25,7 @@ const slides = [
   {
     src: "slide_5.jpg",
     alt: "Barcelona fans waving flags in the stands",
-    caption: "More than a club. A movement."
+    caption: "More than a club."
   }
 ];
 
@@ -44,22 +44,22 @@ function updateSlide(index) {
   caption.style.color = "#ffd700"; // Gold yellow
   updateBackground(index);
   updateChantVisibility(index);
+  resetTimer();
 }
 
 function nextSlide() {
   currentIndex = (currentIndex + 1) % slides.length;
   updateSlide(currentIndex);
-  resetTimer();
 }
 
 function prevSlide() {
   currentIndex = (currentIndex - 1 + slides.length) % slides.length;
   updateSlide(currentIndex);
-  resetTimer();
 }
 
 function resetTimer() {
-  timer = currentIndex === 2 ? 11 : 5;
+  timer = 11;
+  timerDisplay.textContent = timer;
 }
 
 function updateBackground(index) {
@@ -76,9 +76,11 @@ function updateChantVisibility(index) {
 
 updateSlide(currentIndex);
 setInterval(() => {
-  timer--;
-  timerDisplay.textContent = timer;
-  if (timer <= 0) {
+  if (timer > 0) {
+    timer--;
+    timerDisplay.textContent = timer;
+  }
+  if (timer === 0) {
     nextSlide();
   }
 }, 1000);
