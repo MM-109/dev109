@@ -1,17 +1,17 @@
 const images = [
   {
-    src: "slide_1.jpg",
-    alt: "Barça Femení lifting the Champions League trophy",
+    src: "new_slide_4.jpg",
+    alt: "Barça Femení celebrating with the trophy and confetti",
     caption: "History made. Standards set."
   },
   {
     src: "slide_2.jpg",
-    alt: "Xavi and Iniesta with the Champions League trophy",
-    caption: "Brains behind the dynasty. One last dance."
+    alt: "Xavi and Iniesta walking out with their children",
+    caption: "Legends don’t retire. They return as mentors."
   },
   {
     src: "slide_3.jpg",
-    alt: "MSN trio: Suárez, Neymar, and Messi",
+    alt: "MSN trio with their backs: Messi, Suárez, Neymar celebrating with teammates",
     caption: "The most feared trio in football. Ever."
   },
   {
