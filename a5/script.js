@@ -27,7 +27,7 @@ const images = [
 ];
 
 let currentIndex = 0;
-let timer = 4;
+let timer = 11;
 let intervalId;
 
 const slideshow = document.getElementById("slideshow");
@@ -39,6 +39,11 @@ function updateSlide(index) {
   slideshow.src = image.src;
   slideshow.alt = image.alt;
   caption.textContent = image.caption;
+  if (index === 2) {
+    document.body.style.background = "linear-gradient(135deg, #fc00ff, #00dbde)";
+  } else {
+    document.body.style.background = "#f0ece2";
+  }
 }
 
 function nextSlide() {
@@ -57,13 +62,13 @@ function countdown() {
   timer--;
   if (timer === 0) {
     nextSlide();
-    timer = 4;
+    timer = 11;
   }
   timerDisplay.textContent = timer;
 }
 
 function resetTimer() {
-  timer = 4;
+  timer = 11;
   timerDisplay.textContent = timer;
 }
 
