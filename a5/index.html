@@ -3,65 +3,20 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>A5 - Carousel</title>
+  <title>Barça Carousel</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <section class="chant">
-    <p class="red">OUR ENEMIES ARE MANY —</p>
-    <p class="blue">OUR PASSES ARE MORE.</p>
-    <p class="red">THEY CAME WITH FIRE —</p>
-    <p class="blue">WE DANCED ON THEIR ASHES!</p>
-    <p class="red">ENGLAND ROARED —</p>
-    <p class="blue">WE SILENCED THE CROWN!</p>
-    <p class="red">GERMANY CHARGED —</p>
-    <p class="blue">WE PASSED THEM TO DEATH!</p>
-    <p class="red">ITALY PRAYED —</p>
-    <p class="blue">WE BROKE THEIR DEFENSE!</p>
-    <p class="red">FRANCE DREAMED —</p>
-    <p class="blue">WE SHATTERED THEIR SLEEP!</p>
-    <p class="red">WE DO NOT RUN —</p>
-    <p class="blue">WE DO NOT BREAK.</p>
-    <p class="red">WE WEAR NO ARMOR —</p>
-    <p class="blue bold">ONLY COLORS!</p>
-    <p class="red bold">ONLY COLORS!</p>
-    <p class="blue">BLAUGRANA BLOOD!</p>
-    <p class="red">THIS IS NO CLUB —</p>
-    <p class="blue">THIS IS NO TEAM.</p>
-    <p class="red">THIS IS THE ECHO OF <span class="player">CRUYFF</span>...</p>
-    <p class="blue">THE FIRE OF <span class="player">MESSI</span>!</p>
-    <p class="red">THE RAGE OF <span class="player">SU&Aacute;REZ</span>!</p>
-    <p class="blue">THE RHYTHM OF <span class="player">NEYMAR</span>!</p>
-    <p class="red">THE VISION OF <span class="player">INIESTA</span>!</p>
-    <p class="blue">THE MIND OF <span class="player">XAVI</span>!</p>
-    <p class="red">THE FLAME OF <span class="player">DANI ALVES</span>!</p>
-    <p class="chant-call">SAY IT! SAY IT!</p>
-    <p class="chant-call">WE ARE BAR&Ccedil;A!</p>
-    <p class="chant-call">WE ARE MORE THAN A CLUB!</p>
-    <p class="chant-call">WE ARE THE STORM YOU FEAR AT NIGHT!</p>
-    <p class="chant-call">WE ARE THE PASS BEFORE THE GOAL!</p>
-    <p class="ending">OUR ENEMIES ARE MANY —</p>
-    <p class="ending">BUT OUR <span class="player">MESSI</span>... IS ONE.</p>
-  </section>
-
-  <section id="carousel">
+  <main class="carousel-wrapper">
     <img id="slideshow" src="" alt="" />
     <p id="caption"></p>
-    <div class="buttons">
+
+    <div class="controls">
       <button onclick="prevSlide()">Previous</button>
+      <span id="timer">11</span>
       <button onclick="nextSlide()">Next</button>
     </div>
-    <div id="timer">4</div>
-  </section>
-
-  <footer>
-    <a href="https://validator.w3.org/" target="_blank">
-      <img src="https://www.w3.org/Icons/valid-html401" alt="Valid HTML" />
-    </a>
-    <a href="https://jigsaw.w3.org/css-validator/" target="_blank">
-      <img src="https://jigsaw.w3.org/css-validator/images/vcss" alt="Valid CSS" />
-    </a>
-  </footer>
+  </main>
 
   <script src="script.js"></script>
 </body>
