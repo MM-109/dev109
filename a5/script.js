@@ -35,6 +35,7 @@ const slideshow = document.getElementById("slideshow");
 const caption = document.getElementById("caption");
 const timerDisplay = document.getElementById("timer");
 const chantSection = document.getElementById("chant");
+const slideNumber = document.getElementById("slideNumber");
 
 function updateSlide(index) {
   const slide = slides[index];
@@ -45,6 +46,8 @@ function updateSlide(index) {
   updateBackground();
   updateChantVisibility();
   resetTimer();
+
+  if (slideNumber) slideNumber.textContent = index + 1;
 }
 
 function nextSlide() {
