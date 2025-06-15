@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Barça Carousel</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div id="chant">
+  <section id="chant">
     <p>OUR ENEMIES ARE MANY—</p>
     <p>OUR PASSES ARE MORE.</p>
     <p>THEY CAME WITH FIRE—</p>
@@ -25,17 +25,17 @@
     <p>WE ARE MORE THAN A CLUB!</p>
     <p>WE ARE THE STORM YOU FEAR AT NIGHT!</p>
     <p>WE ARE THE PASS BEFORE THE GOAL!</p>
-  </div>
+  </section>
 
   <div class="carousel">
-    <img id="slideshow" src="" alt="" />
-    <p id="caption"></p>
-    <p><span id="timer">11</span></p>
+    <img id="slideshow" src="slide_1.jpg" alt="Barcelona women celebrating Champions League win">
+    <div id="caption">The queens of Europe. Again.</div>
     <div class="controls">
       <button onclick="prevSlide()">Previous</button>
-      <span id="slide-number">1</span>
+      <span id="slideNumber">1</span>
       <button onclick="nextSlide()">Next</button>
     </div>
+    <div id="timer">11</div>
   </div>
 
   <script src="script.js"></script>
