@@ -64,10 +64,9 @@
 
   <img src="spy_game.jpg" usemap="#objectsMap" alt="I Spy Game">
   <map name="objectsMap">
-    <!-- These coordinates are approximate, adjust if needed -->
-    <area shape="rect" coords="170,130,230,200" onclick="foundItem('globe')" alt="Globe">
-    <area shape="rect" coords="260,100,310,170" onclick="foundItem('umbrella')" alt="Umbrella">
-    <area shape="rect" coords="60,180,120,240" onclick="foundItem('duck')" alt="Duck">
+    <area shape="rect" coords="170,130,230,200" href="#" onclick="foundItem('globe', event)" alt="Globe">
+    <area shape="rect" coords="260,100,310,170" href="#" onclick="foundItem('umbrella', event)" alt="Umbrella">
+    <area shape="rect" coords="60,180,120,240" href="#" onclick="foundItem('duck', event)" alt="Duck">
   </map>
 
   <br><button onclick="location.reload()">Play Again</button>
@@ -76,7 +75,8 @@
     const items = ["globe", "umbrella", "duck"];
     let found = 0;
 
-    function foundItem(id) {
+    function foundItem(id, event) {
+      event.preventDefault(); // stop href="#" from jumping
       const el = document.getElementById(id);
       if (!el.style.textDecoration) {
         el.style.textDecoration = "line-through";
