@@ -32,21 +32,6 @@
     li {
       margin-bottom: 10px;
     }
-
-    button {
-      margin-top: 20px;
-      padding: 10px 20px;
-      font-size: 1em;
-      background-color: white;
-      color: #3b29a6;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-
-    button:hover {
-      background-color: #ddd;
-    }
   </style>
 </head>
 <body>
@@ -55,20 +40,18 @@
   <ul>
     <li id="globe">Globe</li>
     <li id="umbrella">Umbrella</li>
-    <li id="duck">Duck</li>
+    <li id="circle">Green Circle</li>
   </ul>
 
-  <img src="spy_game.jpg" usemap="#objectsMap" alt="I Spy Game">
+  <img src="spy-game.jpg" usemap="#objectsMap" alt="I Spy Game">
   <map name="objectsMap">
-    <area shape="rect" coords="170,130,230,200" href="#" onclick="return foundItem(event, 'globe')" alt="Globe">
-    <area shape="rect" coords="260,100,310,170" href="#" onclick="return foundItem(event, 'umbrella')" alt="Umbrella">
-    <area shape="rect" coords="60,180,120,240" href="#" onclick="return foundItem(event, 'duck')" alt="Duck">
+    <area shape="rect" coords="431,495,598,710" href="#" onclick="return foundItem(event, 'globe')" alt="Globe">
+    <area shape="rect" coords="305,599,423,709" href="#" onclick="return foundItem(event, 'circle')" alt="Green Circle">
+    <area shape="rect" coords="595,494,726,604" href="#" onclick="return foundItem(event, 'umbrella')" alt="Umbrella">
   </map>
 
-  <button onclick="location.reload()">Play Again</button>
-
   <script>
-    const items = ["globe", "umbrella", "duck"];
+    const items = ["globe", "umbrella", "circle"];
     let found = 0;
 
     function foundItem(event, id) {
@@ -81,9 +64,7 @@
 
       if (found === items.length) {
         setTimeout(() => {
-          if (confirm("You found all the items! Play again?")) {
-            location.reload();
-          }
+          alert("You found all the items! 🎉");
         }, 200);
       }
 
