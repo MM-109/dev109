@@ -69,7 +69,7 @@ function updateBackground() {
 
 function updateChantVisibility() {
   if (chantSection) {
-    chantSection.style.display = "block";
+    chantSection.style.display = currentIndex === 0 ? "block" : "none";
   }
 }
 
