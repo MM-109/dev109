@@ -11,16 +11,15 @@ body {
   background: repeating-linear-gradient(
     0deg,
     #c20039,
-    #c20039 16px,
-    #062a78 16px,
-    #062a78 32px
+    #c20039 20px,
+    #062a78 20px,
+    #062a78 40px
   );
   color: #ffd700;
   font-weight: bold;
-  padding: 20px 0;
+  padding: 30px 0;
   margin-bottom: 40px;
   font-size: 1.1rem;
-  line-height: 2;
 }
 
 .carousel {
